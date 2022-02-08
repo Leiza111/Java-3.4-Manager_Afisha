@@ -34,7 +34,7 @@ public class MovieManager {
     //вывод последних фильмов
     public Movie[] getRecentMovie() {
         int resultLength;
-        if (recentMovies < movies.length) {
+        if (movies.length > recentMovies) {
             resultLength = recentMovies;
         } else {
             resultLength = movies.length;

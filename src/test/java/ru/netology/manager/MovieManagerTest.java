@@ -71,7 +71,7 @@ public class MovieManagerTest {
         Movie[] actual = manager.getRecentMovie();
         assertArrayEquals(expected, actual);
     }
-
+//фильмов больше чем лимит
     @Test
     public void shouldGiveFilmsLimitBorders11(){
         MovieManager man = new MovieManager(11);
@@ -100,7 +100,7 @@ public class MovieManagerTest {
         Movie[] actual = manager.getRecentMovie();
         assertArrayEquals(expected, actual);
     }
-
+    //фильмов меньше чем лимит
     @Test
     public void shouldGiveFilmsLimitBorders0(){
         MovieManager man = new MovieManager(0);
