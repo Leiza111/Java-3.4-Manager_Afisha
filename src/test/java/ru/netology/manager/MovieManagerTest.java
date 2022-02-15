@@ -17,6 +17,7 @@ public class MovieManagerTest {
     private Movie eighth = new Movie(8, "Eightht films", "drama");
     private Movie ninth = new Movie(9, "Ninth films", "fantasy");
     private Movie tenth = new Movie(10, "Tenth films", "drama");
+    private Movie eleventh = new Movie(11, "eleven films", "fantasy");
 
     @Test
     public void shouldGiveFilmsLimit(){
@@ -74,7 +75,7 @@ public class MovieManagerTest {
 //фильмов больше чем лимит
     @Test
     public void shouldGiveFilmsLimitBorders11(){
-        MovieManager man = new MovieManager(11);
+        MovieManager man = new MovieManager();
         manager.addMovie(first);
         manager.addMovie(second);
         manager.addMovie(third);
@@ -85,8 +86,9 @@ public class MovieManagerTest {
         manager.addMovie(eighth);
         manager.addMovie(ninth);
         manager.addMovie(tenth);
+        manager.addMovie(eleventh);
 
-        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, };
         Movie[] actual = manager.getRecentMovie();
         assertArrayEquals(expected, actual);
     }
